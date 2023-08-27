@@ -25,3 +25,4 @@ Project version specifications:
  <br>
  ![FEEDBACK](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 <br>
+<hr>
