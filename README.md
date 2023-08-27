@@ -21,7 +21,8 @@ Project version specifications:
  ![FEEDBACK](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 <hr>
 
-										---Documentation---
+<p  style="text-align: center;">---Documentation---</p>
+
 <hr>
 						
 Operation:
