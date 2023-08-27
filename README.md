@@ -36,7 +36,7 @@ Project version specifications:
  ![FEEDBACK](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 <hr>
 
-					---Documentation---
+							---Documentation---
 
 <hr>
 						
