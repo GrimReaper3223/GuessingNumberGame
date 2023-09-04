@@ -19,10 +19,11 @@
 package com.app.guessingnumbergame;
 
 /**
- *
- * @author deiv
- * 
  * this file will contain the main class that will start the game
+ * 
+ * @author deiv
+ * @version 2.0_BETA;
+ * 
  */
 public class MainActivity {
 
