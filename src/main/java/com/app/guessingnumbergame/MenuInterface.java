@@ -22,58 +22,54 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- *
- * @author deiv;
- * @version 1.0_BETA;
+ * This class contains the game's main menu, its properties and its methods.
+ * in the future, this class will only show the menu. Your methods will be 
+ * divided into classes for better maintainability, logic, new implementations 
+ * and code readability;
  * 
- * here is the introduction of the game. The user can start a game, 
- * change some options, change difficulty, etc.
+ * @author deiv;
+ * @version 2.0_BETA;
  */
 
-//TODO: review comments
-//TODO: document and review code with javadoc
-
-/*PENDING: assimilate all methods that access the class's instance variables so 
-that they can use the get and set methods*/
-
-/*NOTE: see what can be done in the 'MainActivity' class to remove the overload 
-of the 'MenuInterface' class*/
+//TODO: check the default labels of switch expressions for possible overflows
+//the labels that must be checked will be marked with the netbeans marker
 
 public class MenuInterface {
     
     //creating private instances of the required classes
-    private Scanner scanMenu = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
     
     private int userOption;
     private int difficultyOption;
     
-    private int originCustom;
-    private int boundCustom;
+    private int origin;
+    private int bound;
     
-    //variable that checks that a custom game has been properly 
-    //configured before playing
-    private boolean validCustomGame = false;    //FIXME: change this variable to false again. if it changes to true and stays like that, it will not be possible to reassign values in the settings for the 'custom' game mode
-    private boolean controlCodeFlow = false;
+    /*
+    * variable that checks that a custom game has been properly 
+    * configured before playing
+    */
+    private boolean validCustomGame;
+    private boolean controlCodeFlow;
     
-    String difficultyChosen = "[Easy - default]";
+    String currentDifficulty = "[Easy]";
     
-    
-    
+    //Main menu
     public void mainMenu() {
         
-        System.out.println("\nGuessing Number Game - v1.0;");
+        System.out.println("\nGuessing Number Game - v2.0_BETA;");
         System.out.println("\nChoose an option: \n");
-        System.out.println("(1) - Start Game " + difficultyChosen + "; \n(2) - Settings; \n(3) - Difficulty; \n(4) - Exit;");
+        System.out.println("(1) - Start Game " + currentDifficulty + "; \n(2) - Settings; \n(3) - Difficulty; \n(4) - Exit;");
         System.out.print("\n>> ");
         
-        userOption = scanMenu.nextInt();
+        userOption = scanner.nextInt();
         
         switch (userOption) {
             
             //Starting a Game with default difficulty (easy)
             case 1 -> {
-                System.out.println("\nStarting game " + difficultyChosen + "... ");
-                startGame(difficultyChosen);
+                System.out.println("\nStarting game " + currentDifficulty + "... ");
+                startGame(currentDifficulty);
                 break;
             }
             
@@ -92,40 +88,43 @@ public class MenuInterface {
             //Leave the game    
             case 4 -> {
                 System.out.println("\nExiting...\n");
-                scanMenu.close();
+                scanner.close();
                 break;
             }
-                
+            
+            //NOTE: check this default label for bugs
             default -> {
                 System.err.print("\nInvalid Option");
-                scanMenu.next();
+                mainMenu();
             }
         }
     };
     
+    //start a game with early predefined level
     private void startGame(String level) {
         
-        if(level.equals("[Easy - default]")) {
-            Game_Easy startGame1 = new Game_Easy();
-            startGame1.randomize();
+        if(level.equals("[Easy]")) {
+            DefaultLevelStructure startGame1 = new DefaultLevelStructure();
+            startGame1.randomize(0, 100);
             
         } else if(level.equals("[Intermediary]")) {
-            Game_Intermediary startGame2 = new Game_Intermediary();
-            startGame2.randomize();
+            DefaultLevelStructure startGame2 = new DefaultLevelStructure();
+            startGame2.randomize(0, 200);
             
         } else if(level.equals("[Hard]")) {
-            Game_Hard startGame3 = new Game_Hard();
-            startGame3.randomize();
+            DefaultLevelStructure startGame3 = new DefaultLevelStructure();
+            startGame3.randomize(0, 500);
             
         } else if(level.equals("[Veteran]")) {
-            Game_Veteran startGame4 = new Game_Veteran();
-            startGame4.randomize();
+            DefaultLevelStructure startGame4 = new DefaultLevelStructure();
+            startGame4.randomize(0, 1000);
             
+        // logic to check and start a customizable game
         } else if(level.equals("[Custom]")) {
             
             if(!validCustomGame) {
                 System.out.print("level Custom not configured. Do you want to configure? (y / n) \n>> ");
-                String yOrN = scanMenu.next();
+                String yOrN = scanner.next();
                 
                 switch (yOrN.toLowerCase()) {
                     
@@ -135,14 +134,16 @@ public class MenuInterface {
                     case "n": 
                         System.out.println("Unable to initialize a customizable game without initial settings. Check your settings or try another level");
                         mainMenu();
+                        
+                    //NOTE: check this default label for bugs
                     default: 
                         System.err.print("Invalid option");
-                        scanMenu.next();
+                        scanner.next();
                 }
                 
             } else {
-                Game_Custom startGame5 = new Game_Custom();
-                startGame5.randomize(originCustom, boundCustom);
+                DefaultLevelStructure startGame5 = new DefaultLevelStructure();
+                startGame5.randomize(origin, bound);
             }
         }
     }
@@ -151,10 +152,10 @@ public class MenuInterface {
     private void difficulty() {
         
         System.out.println("\nSelect the difficulty: \n");
-        System.out.println("(1) - Easy [default]; \n(2) - Intermediary; \n(3) - Hard; \n(4) - Veteran; \n(5) - Custom; \n(6) - Back to menu;");
+        System.out.println("(1) - Easy; \n(2) - Intermediary; \n(3) - Hard; \n(4) - Veteran; \n(5) - Custom; \n(6) - Back to menu;");
         System.out.print("\n>> ");
         
-        difficultyOption = scanMenu.nextInt();       
+        difficultyOption = scanner.nextInt();       
         
         switch(difficultyOption) {
             
@@ -162,6 +163,7 @@ public class MenuInterface {
             case 1 -> {
                 System.out.println("\nYou changed the difficulty of the game to Easy");
                 System.out.println("Going back to the menu... ");
+                currentDifficulty = "[Easy]";
                 mainMenu();
                 break;
             }
@@ -170,7 +172,7 @@ public class MenuInterface {
             case 2 -> {
                 System.out.println("\nYou changed the difficulty of the game to Intermediary");
                 System.out.println("Going back to the menu...");
-                difficultyChosen = "[Intermediary]";
+                currentDifficulty = "[Intermediary]";
                 mainMenu();
                 break;
             }
@@ -179,7 +181,7 @@ public class MenuInterface {
             case 3 -> {
                 System.out.println("\nYou changed the difficulty of the game to Hard");
                 System.out.println("Going back to the menu...");
-                difficultyChosen = "[Hard]";
+                currentDifficulty = "[Hard]";
                 mainMenu();
                 break;
             }
@@ -188,7 +190,7 @@ public class MenuInterface {
             case 4 -> {
                 System.out.println("\nYou changed the difficulty of the game to Veteran");
                 System.out.println("Going back to the menu...");
-                difficultyChosen = "[Veteran]";
+                currentDifficulty = "[Veteran]";
                 mainMenu();
                 break;
             }
@@ -198,7 +200,7 @@ public class MenuInterface {
                 System.out.println("\nYou changed the game difficulty to Custom");
                 System.out.println("Before Initializing a custom game, change the properties in the settings");
                 System.out.println("Going back to the menu...");
-                difficultyChosen = "[Custom]";
+                currentDifficulty = "[Custom]";
                 mainMenu();
                 break;
             }
@@ -210,47 +212,65 @@ public class MenuInterface {
                 break;
             }
             
+            //NOTE: check this default label for bugs
             default -> {
                 System.err.print("Invalid option");
-                scanMenu.next();
+                scanner.next();
             }
         }
     };
     
-    //Game options menu
+    /*
+    * Game options menu
+    *
+    * here is the concise logic to configure the customizable game logic
+    */
     private void settings() {
         
         System.out.println("\nSelect the setting you want to change:\n");
         System.out.print("(1) - Change the number generation range; \n(2) - Back to menu; \n\n>> ");
         
+        //to prevent any reassign values bug
         controlCodeFlow = false;
-        userOption = scanMenu.nextInt();
+        
+        userOption = scanner.nextInt();
         
         switch (userOption) {
             
             case 1 -> {
                 
-                if(difficultyChosen.equals("[Custom]")) {
+                if(currentDifficulty.equals("[Custom]")) {
                     
+                    //if the flow falls into the loop, this label will be responsible for resuming the execution of this point
                     restart:
                     while (!controlCodeFlow) {
 
                         try {
-                            Game_Custom randomCustom = new Game_Custom();
-
+                            
                             System.out.print("\nEnter an initial value (origin): ");
-                            originCustom = scanMenu.nextInt();
+                            origin = scanner.nextInt();
                             System.out.print("\nEnter an final value (bound): ");
-                            boundCustom = scanMenu.nextInt();
+                            bound = scanner.nextInt();
 
-                            if(originCustom > boundCustom || boundCustom < originCustom) {
+                            if(origin > bound || bound < origin) {
                                 System.err.print("\nIncompatible data. Try again...");
                                 continue restart;
-                            } else if(originCustom == boundCustom) {
+                            } else if(origin == bound) {
                                 System.err.print("Bound must be greater than origin. Try again...");
                                 continue restart;
                             }
-
+                            
+                            /*
+                            * if the data is valid and inserted correctly, the loop 
+                            * control variable becomes positive, passing the code 
+                            * execution to the configuration method, where the loop 
+                            * control variable will become negative, in order to eliminate 
+                            * bugs in case you want to change the values again
+                            *
+                            * 'validCustomGame' will also become positive, informing 
+                            * the 'startGame()' method that a custom game has been 
+                            * properly configured and can be started;
+                            */
                             System.out.println("\nOrigin and bound set successfully!");
                             controlCodeFlow = true;
                             validCustomGame = true;
@@ -262,6 +282,11 @@ public class MenuInterface {
                             continue restart;
                         }
                     }
+                    
+                /*
+                *  if the 'custom' level is not selected to play, this execution 
+                *  block will be responsible for not allowing the settings to be changed;
+                */
                 } else {
                     System.err.print("\nThis option is only available for \"Custom\" difficulty games.. Change your game difficulty before selecting this option\n");
                     settings();
@@ -274,6 +299,7 @@ public class MenuInterface {
                 break;
             }
             
+            //NOTE: check this default label for bugs
             default -> {
                 System.err.print("Invalid option\n");
                 settings();
