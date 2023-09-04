@@ -1,4 +1,4 @@
-										***GuessingNumberGame v1.0_BETA;***
+										***GuessingNumberGame v2.0_BETA;***
 
 Jogo de adivinhação programado em Java na IDE NetBeans.
 
@@ -23,14 +23,14 @@ Estou disponibilizando esta versão aqui para fins de backup, pois as próximas 
 
 Caso as implementações (não apenas estas, mas também as futuras) tenham sucesso, irei atualizar constantemente o projeto aqui para que ele tenha sempre uma versão melhor e funcional.
 
-Manterei a versão como 1.0 BETA por enquanto...
+Manterei a versão como 2.0 BETA por enquanto...
 
 
 Teste você mesmo:
 
 -Para clonar este repositório em sua máquina, use o seguinte comando em seu terminal Linux, Termux ou Prompt de Comando do Windows:
 
-	git clone https://github.com/GrimReaper3223/GuessingNumberGame-v1.0-BETA
+	git clone https://github.com/GrimReaper3223/GuessingNumberGame-v2.0-BETA
 
 ***Também estarei disponibilizando um arquivo executável .jar para aqueles que desejam executá-lo diretamente no terminal ou Prompt de Comando.
 
@@ -38,7 +38,7 @@ Teste você mesmo:
 
 	-Linux & Termux: 
 
-	java -jar GuessingNumberGame-1.0_BETA.jar
+	java -jar GuessingNumberGame-2.0_BETA.jar
 
 	-Para usuários Windows, a pasta contém um arquivo de script .bat que executa o mesmo código acima com apenas dois cliques.
 
