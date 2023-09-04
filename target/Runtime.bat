@@ -1,3 +1,2 @@
 @echo off
-java -jar GuessingNumberGame-1.0_BETA.jar
-
+java -jar GuessingNumberGame-2.0_BETA.jar
