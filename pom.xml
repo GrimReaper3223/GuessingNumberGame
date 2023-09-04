@@ -28,4 +28,5 @@
             </plugin>
         </plugins>
     </build>
+    <name>GuessingNumberGame 2.0-BETA</name>
 </project>
