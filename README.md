@@ -1,11 +1,11 @@
-# GuessingNumberGame-v1.0_BETA
+# GuessingNumberGame-v2.0_BETA
 
 Project version specifications: 
 
 <br>
 
-![Version](https://img.shields.io/badge/Version-1.0__BETA-red)  ![Version Status](https://img.shields.io/badge/Version_Status-unstable-red)
-![GitHub repo size](https://img.shields.io/github/repo-size/GrimReaper3223/GuessingNumberGame-v1.0-BETA)  ![MAINTAIN](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+![Version](https://img.shields.io/badge/Version-2.0__BETA-red)  ![Version Status](https://img.shields.io/badge/Version_Status-unstable-red)
+![GitHub repo size](https://img.shields.io/github/repo-size/GrimReaper3223/GuessingNumberGame-v2.0-BETA)  ![MAINTAIN](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
   <hr>
   
   OS that run this project: 
@@ -36,7 +36,7 @@ Project version specifications:
  ![FEEDBACK](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 <hr>
 
-							---Documentation---
+						---Documentation---
 
 <hr>
 						
@@ -68,7 +68,7 @@ I'm releasing this version here for backup purposes, as the next improvements I 
 
 If the implementations (not only these, but also the future ones) work out, I will constantly update the project here so that it always has a better and functional version.
 
-I'll keep your version in **1.0_BETA** for now...
+I'll keep your version in **2.0_BETA** for now...
 
 <hr>
 
@@ -76,7 +76,7 @@ I'll keep your version in **1.0_BETA** for now...
 
 --- To clone this repository on your machine, use the following command in your linux terminal, termux or Windows cmd:
 
-    git clone https://github.com/GrimReaper3223/GuessingNumberGame-v1.0-BETA
+    git clone https://github.com/GrimReaper3223/GuessingNumberGame-v2.0-BETA
 
 --- I will also be leaving a .jar executable for those who want to run it directly in the terminal or in cmd.
 
@@ -88,7 +88,7 @@ I'll keep your version in **1.0_BETA** for now...
 
 **Linux & Termux:**
 		
-    java -jar GuessingNumberGame-1.0_BETA.jar
+    java -jar GuessingNumberGame-2.0_BETA.jar
 
 <hr>
 
@@ -100,7 +100,7 @@ For Windows users, the folder comes with a .bat script that executes the same co
 
 --- Both files (.jar and .bat) will be in the following directory:
 
-	GuessingNumberGame-v1.0_BETA/target/
+	GuessingNumberGame-v2.0_BETA/target/
 
 <hr>
 
