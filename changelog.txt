@@ -1,0 +1,112 @@
+*** GuessingNumberGame v2.0_BETA ***
+
+Glossary:
+
++ Added;
+- Removed;
+* Fixed;
+! Possibility of bugs;
+>> To do;
+$ Changed;
+# Deprecated;
+
+
+Changelog:
+
+    v2.0_BETA: 
+        
+        + ADDED
+
+            + Added a 'restartLabel' label inside the 'scanner()' method, present in the game structure;
+            + In the level structure class, a basic construction method was added 
+              and also the use of the keyword 'this' was used to refer to the objects of that class in question;
+
+            + Javadoc added;
+            + More precise comments about the code were added;
+
+
+        - REMOVED
+
+            - Removed Easy, Intermediary, Hard, Veteran and Custom levels. Now the level 
+              system uses a standard file (old custom file, however changed), and in it, 
+              depending on the level that the user chooses, there will be values that 
+              will be inserted in its operating variables;
+
+            - Initial method 'randomize()', present in the game's structural file, now becomes 'void'. 'return' has been removed;
+
+
+        * FIXED
+
+            * Fixed unnecessary instantiation of game structural class done inside 'settings()' method, inside 'while();' block;
+
+            * Fixed the bug that did not allow changing the settings more than once 
+              for the 'custom' game type, negating the code flow control boolean, as 
+              soon as it became positive to exit the 'while() loop ' inside 'settings()';
+
+            * Fixed the bug that did not allow changing the level to 'easy' in the game's difficulty settings;
+            * In the game structure class, the error message bank 'exceptionsMsgBank[ ]' 
+              has been moved inside the void method 'scanner()', so that it is started as soon as this method is called;
+
+            * Some other minor bugs were fixed;
+
+
+        ! BUGS
+
+            ! All 'default' labels for all 'switch()' have been tested and may be 
+              buggy depending on user behavior. Review of error handling will be required in these areas.
+              In a next update I will bring this;
+
+            ! The code may be a bit messy, which can lead to unexpected logic bugs. 
+              This will also be corrected in the future. This update focused on project performance against levels;
+
+
+        $ CHANGED
+
+            $ Most of the variables were called by the 'private' identifier so that 
+              inconsistencies with other parts of the code do not occur;
+
+            $ Names of some variables and methods have been changed for better readability and assimilation;
+            $ Current difficulty level name 'Easy - default' has been changed to 'Easy'
+
+
+        >> TODO
+
+            >> Test the 'static' modifiers and try to dismember main menu 
+            methods in other classes to improve the maintenance of the code as a 
+            whole and to facilitate the implementation of new functionalities;
+
+            >> Check and test the 'default' labels of all 'switch()' and also all 
+               'catch()' blocks to better handle excesses that can cause bugs;
+
+            >> Learn to create tests with JUnit and improve the code implementation performance as a whole;
+
+          
+        # DEPRECATED
+
+            # The 'startGame()', 'settings()' and 'difficulty()' methods will 
+            be spun off from the main menu class and will have their own classes 
+            and their own functions in future releases;
+
+            # The 'difficulty Option' variable may cease to exist within the main menu 
+            and will move to the future 'Difficulty' class;
+
+            # The variables 'origin' and 'bound' will no longer exist inside 
+            the main menu and will be transferred to the future class 'Settings';
+
+            # Possibly I will create a 'Scanner' class for better control over 
+            instances of the native 'Scanner' class. Given that, if this is possible, 
+            the 'scanner' object may cease to exist;
+
+            # The verification booleans that are in the main menu 'validCustomGame' and 'controlCodeFlow' 
+            could be part of the future class 'Settings';
+
+            # The String that shows the chosen difficulty next to the 'Start Game' 
+            option may be part of the future 'Difficulty' class;
+
+
+
+    Additional comments:
+
+        Some other small changes and reassignments that were not mentioned above 
+        will be made more in the source code of the game's default structure level 
+        so that the code itself becomes cleaner and with a more organized logic.
