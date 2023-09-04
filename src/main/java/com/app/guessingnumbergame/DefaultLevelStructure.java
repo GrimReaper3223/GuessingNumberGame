@@ -21,65 +21,56 @@ package com.app.guessingnumbergame;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
+
 /**
- *
+ * File that will receive the parameters passed according to the selected game difficulty
+ * 
  * @author deiv;
- * @version 1.0_BETA;
- * 
- * game mechanics structure based on custom user level
- * the structure of this file can be used to generate 
- * other more difficult and customizable levels
- * 
+ * @version 2.0_BETA;
  */
-public class Game_Custom {
+public class DefaultLevelStructure {
     
-    // instantiating the user mainMenu class, scanner, and random_Intermediary
-    private Random random_Custom;
-    private Scanner scan_Custom;
+    // instantiating the user MenuInterface class, Scanner, and Random
+    private Random random;
+    private Scanner scan;
     
-    // instantiating user and game logic variables
+    // instantiating user choice and randomized number
     private int generatedNumber;
     private int receivedUserNumber;
     
-    //These variables are present only in the customizable game, and they will 
-    //receive the origin and limit values that the user customizes.
+    // these variables will be responsible for showing information about the game's 
+    // settings to the sectors that need it.
     private int origin;
     private int bound;
     
+    // control flow variable
     private boolean validData = false;
     
-    // basic constructor for better use of the code
-    public Game_Custom() {
-        this.random_Custom = new Random();
-        this.scan_Custom = new Scanner(System.in);
+    
+    
+    // basic constructor for better understanding of the code
+    public DefaultLevelStructure() {
+        this.random = new Random();
+        this.scan = new Scanner(System.in);
     }
     
     /**
-     * generating a random_Intermediary integer between origin and bound
+     * generating a random integer between origin and bound
      * 
-     * @return the randomly generated number for the generatedNumber variable
-     * 
-     * @param origin is received from the configuration class in the menu for customizable games
-     * @param bound is received from the configuration class in the menu for customizable games
+     * @param origin receives configured values from the MenuInterface class according to the chosen level
+     * @param bound receives configured values from the MenuInterface class according to the chosen level
      */
-    public int randomize(int origin, int bound) {
+    public void randomize(int origin, int bound) {
         
+        //assign parameter values to class variables
         this.origin = origin;
         this.bound = bound;
         
-        generatedNumber = random_Custom.nextInt(origin, bound) + 1;
+        generatedNumber = random.nextInt(origin, bound) + 1;
         
         scanner();
-        return generatedNumber;
     };
     
-    //error message database
-    String[] exceptionsMsgBank = {
-        "Number exceeds the limit ( > "+ bound +");",
-        "Number is less than limit ( < "+ origin +");",
-        "Enter only numbers!",
-        "Enter a valid answer!",
-    };
     
     /**
     * Exception handling...
@@ -101,34 +92,52 @@ public class Game_Custom {
     */
     private void scanner() {
         
+        /*
+        * error message database
+        *
+        * These error messages should be initialized here in the 
+        * input of this method
+        */
+        String[] exceptionsMsgBank = {
+            "Number exceeds the limit ( > "+ bound +");",
+            "Number is less than limit ( < "+ origin +");",
+            "Enter only numbers!",
+            "Enter a valid answer!",
+        };
+        
+        //Checking data validity
+        restartLabel:
         while(!validData) {
         
             try{
 
                 System.out.print("\nEnter any number from "+ origin +" to "+ bound +" to guess which number was generated: ");
-                receivedUserNumber = scan_Custom.nextInt();
+                receivedUserNumber = scan.nextInt();
 
                 if(receivedUserNumber > bound) {
                     System.out.println(exceptionsMsgBank[0]);
-                    scanner();
+                    continue restartLabel;
 
                 } else if (receivedUserNumber < origin) {
                     System.out.println(exceptionsMsgBank[1]);
-                    scanner();
+                    continue restartLabel;
 
                 } else {
                     consoleMsgs();
                 }
 
-            }catch(InputMismatchException e) {
+            } catch(InputMismatchException e) {
                 System.out.println(exceptionsMsgBank[2]);
-                scan_Custom.next();
+                scan.next();
+                continue restartLabel;
             }
         }
     };
     
-    //Checking entered number and providing hints 
-    //based on randomly generated number
+    /*
+    * Checking entered number and providing hints 
+    * based on randomly generated number
+    */
     private void consoleMsgs() {
         
         if(receivedUserNumber > generatedNumber) {
@@ -167,7 +176,7 @@ public class Game_Custom {
     private void restartTheGame() {
         
         System.out.print("Do you want to play again? (y / n): ");
-        String yesOrNo = scan_Custom.next();
+        String yesOrNo = scan.next();
         
         switch (yesOrNo.toLowerCase()) {
             
