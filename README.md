@@ -1,11 +1,12 @@
-# GuessingNumberGame-v2.0_BETA
+
+# GuessingNumberGame-v3.0_ALPHA
 
 Project version specifications: 
 
 <br>
 
-![Version](https://img.shields.io/badge/Version-2.0__BETA-red)  ![Version Status](https://img.shields.io/badge/Version_Status-unstable-red)
-![GitHub repo size](https://img.shields.io/github/repo-size/GrimReaper3223/GuessingNumberGame-v2.0-BETA)  ![MAINTAIN](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+![Version](https://img.shields.io/badge/Version-3.0__ALPHA-red)  ![Version Status](https://img.shields.io/badge/Version_Status-Stable-red)
+![GitHub repo size](https://img.shields.io/github/repo-size/GrimReaper3223/GuessingNumberGame-v3.0__ALPHA)  ![MAINTAIN](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
   <hr>
   
   OS that run this project: 
@@ -61,14 +62,12 @@ For each wrong result, a simple hint is generated, providing the user with a dir
 
 ***Project Status***
 
-The game is still going through some improvements. This version will be **Beta**, as the menu interface file is very overloaded.
-With that in mind, I'm going to split some options into other class files so that the overall app performs slightly better at runtime.
+The game is still going through some improvements. This version will be **ALPHA**.
+Many improvements have been made in this new version. The next versions will include new features and better gameplay.
 
-I'm releasing this version here for backup purposes, as the next improvements I make to the game will be complex and abrupt, and I don't know how well the game will adapt to the changes. So I leave here this functional version for possible future clones.
+In the future, the game will gain a TUI (Text-User Interface), as I am thinking about how to learn how to manipulate elements in closed packages (applications)
 
 If the implementations (not only these, but also the future ones) work out, I will constantly update the project here so that it always has a better and functional version.
-
-I'll keep your version in **2.0_BETA** for now...
 
 <hr>
 
@@ -76,7 +75,7 @@ I'll keep your version in **2.0_BETA** for now...
 
 --- To clone this repository on your machine, use the following command in your linux terminal, termux or Windows cmd:
 
-    git clone https://github.com/GrimReaper3223/GuessingNumberGame-v2.0-BETA
+    git clone https://github.com/GrimReaper3223/GuessingNumberGame-v3.0__ALPHA
 
 --- I will also be leaving a .jar executable for those who want to run it directly in the terminal or in cmd.
 
@@ -88,7 +87,7 @@ I'll keep your version in **2.0_BETA** for now...
 
 **Linux & Termux:**
 		
-    java -jar GuessingNumberGame-2.0_BETA.jar
+    java -jar GuessingNumberGame-3.0_ALPHA.jar
 
 <hr>
 
@@ -100,12 +99,12 @@ For Windows users, the folder comes with a .bat script that executes the same co
 
 --- Both files (.jar and .bat) will be in the following directory:
 
-	GuessingNumberGame-v2.0_BETA/target/
+	GuessingNumberGame-v3.0_ALPHA/GuessingNumberGame/target/
 
 <hr>
 
 ***Final Considerations:***
 
----**NOTE:** as it is a beta version with some things that may weigh down its execution, stutters may occur in the application when calling certain functions (probably nothing that you may notice strange);
+---**NOTE:** no comments---;
 
 I hope you enjoy! :)
