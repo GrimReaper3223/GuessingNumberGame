@@ -1,3 +1,8 @@
-com/app/guessingnumbergame/DefaultLevelStructure.class
-com/app/guessingnumbergame/MainActivity.class
-com/app/guessingnumbergame/MenuInterface.class
+com/app/guessingnumbergame/Start.class
+com/app/guessingnumbergame/Settings.class
+com/app/guessingnumbergame/DefaultGameStructure.class
+com/app/guessingnumbergame/Assets.class
+com/app/guessingnumbergame/Difficulty.class
+com/app/guessingnumbergame/Runtime.class
+com/app/guessingnumbergame/Scan.class
+com/app/guessingnumbergame/MainMenu.class

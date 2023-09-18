@@ -1,3 +1,8 @@
-/home/deiv/Documentos/GuessingNumberGame-v2.0-BETA/src/main/java/com/app/guessingnumbergame/DefaultLevelStructure.java
-/home/deiv/Documentos/GuessingNumberGame-v2.0-BETA/src/main/java/com/app/guessingnumbergame/MenuInterface.java
-/home/deiv/Documentos/GuessingNumberGame-v2.0-BETA/src/main/java/com/app/guessingnumbergame/MainActivity.java
+/home/deiv/Documentos/GuessingNumberGame-v3.0_ALPHA/src/main/java/com/app/guessingnumbergame/DefaultGameStructure.java
+/home/deiv/Documentos/GuessingNumberGame-v3.0_ALPHA/src/main/java/com/app/guessingnumbergame/Settings.java
+/home/deiv/Documentos/GuessingNumberGame-v3.0_ALPHA/src/main/java/com/app/guessingnumbergame/MainMenu.java
+/home/deiv/Documentos/GuessingNumberGame-v3.0_ALPHA/src/main/java/com/app/guessingnumbergame/Scan.java
+/home/deiv/Documentos/GuessingNumberGame-v3.0_ALPHA/src/main/java/com/app/guessingnumbergame/Runtime.java
+/home/deiv/Documentos/GuessingNumberGame-v3.0_ALPHA/src/main/java/com/app/guessingnumbergame/Assets.java
+/home/deiv/Documentos/GuessingNumberGame-v3.0_ALPHA/src/main/java/com/app/guessingnumbergame/Difficulty.java
+/home/deiv/Documentos/GuessingNumberGame-v3.0_ALPHA/src/main/java/com/app/guessingnumbergame/Start.java
