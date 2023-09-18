@@ -1,0 +1,31 @@
+***GuessingNumberGame***
+
+-criar um arquivo de estrutura padrao que recebera os valores dos niveis escolhidos;    --check;
+-criar um arquivo que sera o menu de opcoes;    --check;
+-criar um arquivo de configuracao;      --check;
+-criar configuracoes;       --check;
+-criar um arquivo de dificuldade;       --check;
+-criar dificuldade;     --check;
+-criar um arquivo para inicio de jogo;  --check;
+-criar logica para inicio de jogo;      --check;
+-criar uma classe com um metodo exclusivo para o scanner;       --check;
+-abrir somente um scanner e usar ele para passar um valor numerico para as variaveis;   --check;
+-trabalhar com InputMismatchException em cima do scanner;   --check;
+-trabalhar tambem com variaveis de classe (static), para que elas possam manter um valor definido anteriormente e que possa ser usado em outros lugares do codigo;  --check
+-trabalhar com random;      --check;
+-usar getters e setters;    --check;
+
+--------------------------------
+
+passo a passo
+
+primeiramente, criar um arquivo de estrutura padrao que recebera os valores dos niveis escolhidos. Este arquivo sera a base do jogo.	--check
+Apos isso, criar um arquivo que sera o menu de opcoes onde dependendo da opcao escolhida, ele levara a uma outra classe contendo a opcao.	--check
+Feito isso, criar 3 arquivos classe que serao: menu de configuracoes, menu de dificuldade e uma classe que inicialize o jogo.	--check
+Logo apos isso, criar uma classe com um metodo exclusivo para o scanner e trabalhar somente com ela com o parametro 'system.in'.   --check
+Depois disso, trabalhar com excessao nao correlacionada de entrada em cima da classe que executar o scanner.nextInt().	--check
+Utilizar-se tambem de variaveis estaticas para melhor compartilhamento de valores e trabalhar com random.   --check
+user getters e setters vai ajudar a melhorar a legibilidade do codigo. 	 --check
+
+
+--------------------------------------
