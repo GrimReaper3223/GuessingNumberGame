@@ -1,17 +1,82 @@
-*** GuessingNumberGame v2.0_BETA ***
+
+*** GuessingNumberGame v3.0_ALPHA ***
 
 Glossary:
 
 + Added;
 - Removed;
 * Fixed;
-! Possibility of bugs;
+! Bugs;
 >> To do;
 $ Changed;
 # Deprecated;
 
 
 Changelog:
+
+    V3.0_ALPHA [Stable];
+
+    Maven Compiler Plugin Version: 3.11.0;
+    Maven Model Builder Version: 3.9.4;
+    Maven Jar Plugin Version: 3.3.0;
+        
+        + ADDED
+        
+            + A class called "Assets" was added to manage the initialization and verification of all static objects;
+            + Added unique Scan method for using Scanners to simplify and polish performance and code writing;
+            
+        - REMOVED
+
+            - Removed some unnecessary files that do not match the project structure;
+            - Removed some imports that became useless due to the app's coding progression;
+            - Some instances no longer exist in this new version;
+            
+        * FIXED
+            
+            * Bug related to application performance fixed;
+            * Fixed some bugs that caused the "NullPointerException" error in some execution areas;
+            * Fixed code escape bugs, causing unexpected app closures;
+            * Some small bugs fixed;
+
+        ! BUGS
+        
+            ! Without a "default" label, any number entered that is not recognized 
+              as an option will cause the app to close early, creating a code leak. (later this will be corrected);
+            
+            ! Inconsistencies when trying to clear the scanner buffer when code 
+              execution enters catch(), in the try {} block. This causes option messages to not be shown. 
+              This will also be fixed in the next update;
+
+        >> TODO
+
+            >> Everything that is in the "Bugs" section;
+            >> Trying to resolve the error that says that the 'assets' object, in 'Runtime', is not being used;
+            >> Learn to create tests with JUnit and improve the code implementation performance as a whole;
+
+        $ CHANGED
+
+            $ Changed instance execution mode. Now all instances are started before the app runs;
+            $ Functions nested in single files fragmented into multiple files for better performance and readability;
+            $ Cleaner and more organized menu class
+            $ Cleaner start class with syntax and logic organization;
+            $ Perfectly oriented Settings class with more complete and descriptive comments;
+            $ Scan class with a more organized and simple syntax;
+            $ More organized Difficulty class;
+            $ More organized standard game structure class with cleaner logic and more fluid execution;
+            $ Assets class modeled for better visual presentation and better performance and logical maintainability;
+            $ .bat file for Windows users with boot code updated to run the newest version (3.0_ALPHA);
+
+        # DEPRECATED
+
+            # "Guessing Number Game-2.0_BETA.jar" file is deprecated;
+            # "Runtime.bat" file v2.0_BETA is deprecated;
+            # "MainActivity.java" file v2.0_BETA is deprecated;
+            # "MenuInterface.java" file v2.0_BETA is deprecated;
+            # All binaries in path target/classes/com/app/guessingnumbergame is deprecated;
+
+_________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________
 
     v2.0_BETA: 
         
@@ -71,11 +136,11 @@ Changelog:
 
         >> TODO
 
-            >> Test the 'static' modifiers and try to dismember main menu 
-            methods in other classes to improve the maintenance of the code as a 
+            >> Test the 'static' modifiers and try to dismember main menu     
+            methods in other classes to improve the maintenance of the code as
             whole and to facilitate the implementation of new functionalities;
 
-            >> Check and test the 'default' labels of all 'switch()' and also all 
+            >> Check and test the 'default' labels of all 'switch()' and also all
                'catch()' blocks to better handle excesses that can cause bugs;
 
             >> Learn to create tests with JUnit and improve the code implementation performance as a whole;
