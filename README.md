@@ -1,5 +1,5 @@
 
-# GuessingNumberGame-v3.0_ALPHA
+# GuessingNumberGame-v3.0.1
 
 Project version specifications: 
 
