@@ -5,7 +5,7 @@ package com.app.guessingnumbergame;
  * In the future there will be more options
  * 
  * @author deiv;
- * @version 3.0_ALPHA;
+ * @version 3.0.1;
  * @since class: 2.0_BETA;
  *      \
  *       @since settings funcionality: 1.0_BETA;
@@ -46,7 +46,7 @@ public class Settings {
             
             case 1 -> {
                 
-                if(Difficulty.difficultySet.equals("Custom")) {
+                if(Difficulty.difficultySet.equals("[Custom]")) {
                     
                     restart:
                         while(!controlVariable) {

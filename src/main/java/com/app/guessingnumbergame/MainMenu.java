@@ -4,7 +4,7 @@ package com.app.guessingnumbergame;
  * class that shows the user menu interface
  * 
  * @author deiv;
- * @version 3.0_ALPHA;
+ * @version 3.0.1;
  * @since class: 2.0_BETA;
  *   |
  *    \
@@ -18,7 +18,7 @@ public class MainMenu {
     //main menu method
     public void mainMenu() {
         
-        System.out.println("\f\nGuessing Number Game - v3.0_BETA;");
+        System.out.println("\f\nGuessing Number Game - v3.0.1;");
         System.out.println("\nChoose an option:\n");
         System.out.println("(1) - Start Game " + Difficulty.difficultySet + "; \n(2) - Settings; \n(3) - Difficulty; \n(4) - Exit;");
         System.out.print("\n>> ");
