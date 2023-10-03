@@ -75,7 +75,7 @@ If the implementations (not only these, but also the future ones) work out, I wi
 
 --- To clone this repository on your machine, use the following command in your linux terminal, termux or Windows cmd:
 
-    git clone https://github.com/GrimReaper3223/GuessingNumberGame-v3.0__ALPHA
+    git clone https://github.com/GrimReaper3223/GuessingNumberGame
 
 --- I will also be leaving a .jar executable for those who want to run it directly in the terminal or in cmd.
 
