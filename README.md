@@ -5,7 +5,7 @@ Project version specifications:
 
 <br>
 
-![Version](https://img.shields.io/badge/Version-3.0__ALPHA-green)  ![Version Status](https://img.shields.io/badge/Version_Status-Stable-green)
+![Version](https://img.shields.io/badge/Version-3.0.1-green)  ![Version Status](https://img.shields.io/badge/Version_Status-Stable-green)
 ![GitHub repo size](https://img.shields.io/github/repo-size/GrimReaper3223/GuessingNumberGame)  ![MAINTAIN](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
   <hr>
   
