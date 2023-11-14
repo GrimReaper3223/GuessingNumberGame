@@ -5,8 +5,8 @@ Project version specifications:
 
 <br>
 
-![Version](https://img.shields.io/badge/Version-3.0.1-green)  ![Version Status](https://img.shields.io/badge/Version_Status-Stable-green)
-![GitHub repo size](https://img.shields.io/github/repo-size/GrimReaper3223/GuessingNumberGame)  ![MAINTAIN](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+![Version](https://img.shields.io/badge/Version-3.0.1-red)  ![Version Status](https://img.shields.io/badge/Version_Status-Unstable-red)
+![GitHub repo size](https://img.shields.io/github/repo-size/GrimReaper3223/GuessingNumberGame)  ![MAINTAIN](https://img.shields.io/badge/Maintained%3F-no-red.svg)
   <hr>
   
   OS that run this project: 
@@ -40,7 +40,17 @@ Project version specifications:
 						---Documentation---
 
 <hr>
-						
+
+*********************
+---------------------
+@Deprecated project
+---------------------
+This project has been discontinued due to poor code quality and severe bugs.
+---------------------
+A new remastered version, which will feature a TUI using the Lanterna framework and with more features is being developed, according to my studies in Java and will soon be uploaded to a new repository;
+---------------------
+*********************
+			
 Operation:
 
 Basically, the game consists of guessing a randomly generated number within a specific range, according to the selected level.
